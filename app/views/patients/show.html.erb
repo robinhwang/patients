@@ -1,0 +1,10 @@
+<h1><%= Patient.patient_name(@patient) %></h1>
+
+<p><%= @patient.gender %> </p>
+<p><%= @patient.birthday %> </p>
+<p><%= @patient.status %></p>
+<p><%= @patient.location.name %> </p>
+
+<p><%=link_to "Back", patients_path %> </p>
+<p><%=link_to "edit", edit_patient_path(@patient) %> </p>
+<p><%=link_to "destroy", patient_path(@patient), :method => :delete, :confirm => 'Are you sure' %> </p>

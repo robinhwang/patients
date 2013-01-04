@@ -1,0 +1,44 @@
+<%= form_for @patient do |f| %>
+	<div class="form">
+		<%= f.label :first_name %> <br>
+		<%= f.text_field :first_name %>
+  </div>
+
+  <div class="form">
+		<%= f.label :middle_name %> <br>
+		<%= f.text_field :middle_name %>
+  </div>
+
+  <div class="form">
+		<%= f.label :last_name %> <br>
+		<%= f.text_field :last_name %>
+  </div>
+
+  <div class="form">
+		<%= f.label :Gender %> <br>
+		<% Patient::GENDER.each do |gender| %>
+			<%= f.radio_button(:gender, gender) %>
+			<%= f.label gender %>
+		<% end %>
+  </div>
+
+   <div class="form">
+		<%= f.label :Birthday %> <br>
+		<%= f.datetime_select  :birthday %>
+  </div>
+
+   <div class="form">
+		<%= f.label 	:status %> <br>
+		<%= f.select 	:status, Patient::STATUS %>
+  </div>
+
+   <div class="form">
+		<%= f.label  :Location %> <br>
+		<%= f.select :location_id, all_location %>
+  </div>
+
+  <div class="action">
+  	<%= f.submit %>
+  </div>
+
+<% end %>

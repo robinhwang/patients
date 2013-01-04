@@ -1,0 +1,32 @@
+<h1>Patients  Lists</h1>
+<table>
+  <tr>
+    <th>Patient_name</th>
+    <th>Birthday</th>
+    <th>Gender</th>
+    <th>Medical Record</th>
+    <th>Status</th>
+    <th>Location</th>
+    <th>Viewed Count</th>
+
+  </tr>
+
+ <% @patients.each do |patient| %>
+  <tr>
+    <td><%= Patient.patient_name(patient) %> </td>
+    <td><%= patient.birthday %> </td>
+    <td> <%= patient.gender %></td>
+    <td></td>
+    <td><%= patient.status %></td>
+ 
+    <td><%= patient.viewed_count %></td>
+  </tr>
+  <td><%= link_to 'Show', patient_path(patient) %></td>
+  <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+  <td><%= link_to 'Destroy', patient_path(patient), :method => :delete, :confirm => 'Are YOU SURE?' %></td>
+<% end %>
+</table>
+
+<%= link_to "create patient", new_patient_path %>
+<hr>
+<%= link_to "Locations", locations_path %>

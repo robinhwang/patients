@@ -1,0 +1,16 @@
+<%= form_for @location do |f| %>
+	<div class="form">
+		<%= f.label :city_name %> <br>
+		<%= f.text_field :name %>
+	</div>
+
+	<div class="form">
+		<%= f.label :code %> <br>
+		<%= f.text_field :code %>
+	</div>
+
+	<div class="action">
+		<%= f.submit %>
+	</div>
+<% end %>
+
