@@ -26,6 +26,10 @@ class Patient < ActiveRecord::Base
     patient.last_name+'*'+patient.first_name+'*'+patient.middle_name
   end
 
+  def self.age(patient)
+    Time.now.year - patient.birthday.year
+  end
+
 end
 
 

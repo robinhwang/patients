@@ -24,7 +24,9 @@
 
    <div class="form">
 		<%= f.label :Birthday %> <br>
-		<%= f.datetime_select  :birthday %>
+		<%= f.date_select  :birthday,
+					:start_year => Time.now.year - 100,
+					:end_year   => Time.now.year %>
   </div>
 
    <div class="form">

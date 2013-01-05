@@ -1,0 +1,13 @@
+<%= link_to(@location.name, location_path(@location)) %>
+
+<h3>see guys living here</h3>
+<% @patients.each do |p| %>
+<tr>
+	<td><%= link_to(Patient.patient_name(p), patient_path(p)) %></td>
+</tr>
+<% end %>
+<hr>
+
+<%= link_to 'back', patients_path %>
+
+

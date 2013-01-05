@@ -1,4 +1,10 @@
 class PatientsController < ApplicationController
+	def location
+		@location = Location.find(params[:id])
+		place = @location.id
+		@patients = Patient.where(:location_id => place)
+	end
+
 	def index
 		@patients = Patient.paginate(:page => params[:page], :per_page => 20).order('id DESC')
 
