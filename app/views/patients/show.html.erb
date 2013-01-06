@@ -1,10 +1,10 @@
 <%= render :partial => 'layouts/select' %>
 <h1><%= Patient.patient_name(@patient) %></h1>
-<p><%= @patient.gender %> </p>
-<p><%= Patient.age(@patient) %> </p>
-<p><%= medical_record(@patient.id) %> </p>
-<p><%= @patient.status %></p>
-<p><%= link_to(@patient.location.name, location_patients_path(@patient.location)) %> </p>
+<p>Gender: <%= @patient.gender %> </p>
+<p>Age: <%= Patient.age(@patient) %> </p>
+<p>Medical Record: <%= medical_record(@patient.id) %> </p>
+<p>Status: <%= @patient.status %></p>
+<p>Location: <%= link_to(@patient.location.name, location_patients_path(@patient.location)) %> </p>
 
 <p><%=link_to "Back", patients_path %> </p>
 <p><%=link_to "edit", edit_patient_path(@patient) %> </p>

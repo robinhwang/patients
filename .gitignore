@@ -1,7 +1,10 @@
 /.bundle
 /log/*.log
 /tmp
-
+public/assets/
+tags
+config/database.yml
 #Ignore the ctags_file
 .tag*
+*.*~
 

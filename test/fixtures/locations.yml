@@ -4,8 +4,17 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
+one:
+  name: Shanghai
+  code: 001
+
 # column: value
 #
-two: {}
+two:
+  name: Changsha
+  code: 002
+
+three:
+  name: Beijing
+  code: 003
 #  column: value

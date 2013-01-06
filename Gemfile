@@ -25,6 +25,7 @@ end
 
 group :development do
 	gem 'pry-rails', "~>0.1"
+	gem "better_errors"
 end
 
 gem 'jquery-rails'
