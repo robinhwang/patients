@@ -1,4 +1,4 @@
-<%= render :partial => 'layouts/select_lanuage' %>
+<%= render :partial => 'layouts/select_language' %>
 <h1>Patients  Lists</h1>
 <table>
   <tr>
@@ -19,7 +19,7 @@
     <td><%= patient.gender %></td>
     <td><%= medical_record(patient.id) %></td>
     <td><%= patient.status %></td>
-    <td><%= link_to(patient.location.name, location_path(patient.location)) %> </td>
+    <td><%= link_to patient.location.name, location_path(patient.location) %> </td>
     <td><%= patient.viewed_count %></td>
   </tr>
   <td><%= link_to 'Show', patient_path(patient) %></td>

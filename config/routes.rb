@@ -1,4 +1,6 @@
 Patients::Application.routes.draw do
+  
+
   resources :locations
   resources :patients
 
