@@ -63,6 +63,25 @@ class PatientsController < ApplicationController
 		@patient = Patient.find(params[:id])
 		@patient.destroy
 
-		redirect_to :root
+		redirect_to patients_path
 	end
+
+	#test "should create patient" do
+    #assert_difference("Patient.all.count") do
+      #@location2 = locations(:two)
+      #post :create, :patient => {
+        #:first_name   => @patient.first_name,
+        #:middle_name  => @patient.middle_name,
+        #:last_name    => @patient.last_name,
+        #:birthday     => @patient.birthday,
+        #:gender       => @patient.gender,
+        #:status       => @patient.status,
+        #:user_status  => @patient.user_status,
+        #:viewed_count => @patient.viewed_count
+      #}
+    #end
+#
+    #assert_redirected_to patient_path(assigns[:patient])
+    #assert_equal("New patient created", flash[:notice])
+  #end
 end

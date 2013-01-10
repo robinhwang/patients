@@ -4,7 +4,13 @@
 <p>Age: <%= Patient.age(@patient) %> </p>
 <p>Medical Record: <%= medical_record(@patient.id) %> </p>
 <p>Status: <%= @patient.status %></p>
-<p>Location: <%= link_to(@patient.location.name, location_patients_path(@patient.location)) %> </p>
+<p>Location:
+  <% if @patient.location %>
+    <%= link_to(@patient.location.name, location_patients_path(@patient.location)) %>
+  <% else %>
+    <b>nil</b>
+  <% end %>
+</p>
 
 <p><%=link_to "Back", patients_path %> </p>
 <p><%=link_to "edit", edit_patient_path(@patient) %> </p>

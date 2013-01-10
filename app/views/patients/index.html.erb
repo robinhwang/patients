@@ -19,7 +19,11 @@
     <td><%= patient.gender %></td>
     <td><%= medical_record(patient.id) %></td>
     <td><%= patient.status %></td>
-    <td><%= link_to patient.location.name, location_path(patient.location) %> </td>
+    <td>
+      <% if patient.location %>
+        <%= link_to patient.location.name, location_path(patient.location) %> 
+      <% end %>
+    </td>
     <td><%= patient.viewed_count %></td>
   </tr>
   <td><%= link_to 'Show', patient_path(patient) %></td>
